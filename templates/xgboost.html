@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %} Prediction_XGBoost {% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top:80px">
+  <body>
+      <center>
+      <h1> XGBoost | Choose Your Parameters </h1>
+      </center>
+      <hr style="width:100%;text-align:left;margin-left:0">
+        
+        <form action="/prediction/xgboost/result" method="GET">
+          <p> Please enter number of validation: </p>
+          <input type="text" class="form-control" placeholder="e.g. 5" name="num_validation"> </input> 
+          <br>
+          <p> Please enter size of test set: </p>
+          <input type="text" class="form-control" placeholder="e.g. 0.2" name="test_size"> </input> 
+          <br>
+          <input type="submit" value="Continue"> </input>
+        </form>
+      </div>
+
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <p>
+        <center>
+        <form action="/" method="GET">
+            <input type="submit" value="Menu">
+        </form>
+        </center>
+        </p>
+  </body>
+</div>
+
+{% endblock content %}

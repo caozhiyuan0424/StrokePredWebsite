@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %} Analysis_corr {% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top:80px">
+  <body>
+      <center>
+      <h1> Exploratory Analysis | Feature Correlation </h1>
+      </center>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <body>
+        <h2>Correlation Matrix</h2>
+        <div id='chart' class='chart'></div>
+      </body>
+      <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>-->
+      <script type='text/javascript'>
+        var graphs2 = {{graphJSON | safe}};
+        Plotly.plot('chart',graphs2,{});
+      </script>
+      <p>
+        First, I <b>transform all the categorical features into numeric ones</b>. 
+      </p>
+      <p>
+        Then I plot the correlation matrix of the 10 features. The heatmap shows the Pearson correlation coefficients between the features 
+        in my dataset. The relationships between the features can then be identified and how they may affect the target variable be understood.
+      </p>
+      <p>
+        The Pearson correlation coefficient is a measure of the linear relationship between two variables. It ranges from -1 to 1, where -1 
+        indicates a strong negative relationship, 0 indicates no relationship, and 1 indicates a strong positive relationship. A correlation 
+        matrix can help identify which features are highly correlated with each other and which are not.
+      </p>
+      <p>
+        If two features are highly correlated, it may be beneficial to remove one of them from the model to avoid overfitting and improve the 
+        model's performance. From the result, it is shown that there does not exist two features that are highly correlated. Thus I keep all
+        the 10 features to train the models. 
+      </p>
+
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <p>
+        <center>
+        <form action="/" method="GET">
+            <input type="submit" value="Menu">
+        </form>
+        </center>
+        </p>
+  </body>
+</div>
+
+{% endblock content %}

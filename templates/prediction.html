@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %} Prediction {% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top:80px">
+  <body>
+      <center>
+      <h1> Model Prediction | Select Your Model </h1>
+      </center>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      
+      <div class="jumbotron">
+        <div class="container">
+          <h1>XGBoost</h1>
+          <p>XGBoost (eXtreme Gradient Boosting) is a popular and efficient open-source implementation of the gradient boosting 
+            algorithm for machine learning.</p>
+          <p>Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction 
+            model in the form of an ensemble of weak prediction models, typically decision trees. The main idea behind gradient boosting 
+            is to train weak models sequentially, each trying to correct the mistakes of the previous model.</p>
+          <p>Overall, XGBoost is a powerful and flexible tool for implementing gradient boosting and is well-suited for a wide range of 
+            machine learning tasks.</p>
+          <p><a class="btn btn-primary btn-lg" role="button" href="http://127.0.0.1:5000/prediction/xgboost">
+            Continue</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Random Forest</h1>
+          <p>Random Forest is a popular and powerful ensemble machine learning algorithm that is used for classification and regression tasks.</p>
+          <p>Random Forest is a flexible and easy-to-use algorithm that can handle a large number of input features and can deal with missing 
+            values and categorical variables automatically. It is also relatively resistant to overfitting, due to the way it combines multiple 
+            decision trees.</p>
+          <p>Overall, random forest is a widely used and robust machine learning algorithm that is well-suited for many applications.</p>
+          <p><a class="btn btn-primary btn-lg" role="button" href="http://127.0.0.1:5000/prediction/rforest">
+            Continue</a>
+          </p>
+        </div>
+      </div>
+
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <p>
+        <center>
+        <form action="/" method="GET">
+            <input type="submit" value="Menu">
+        </form>
+        </center>
+        </p>
+  </body>
+</div>
+
+{% endblock content %}

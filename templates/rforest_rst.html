@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %} Prediction_RandomForest_result {% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top:80px">
+  <body>
+      <center>
+      <h1> Random Forest | Results </h1>
+      </center>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <h2>The values you input are:</h2>
+      <ul>
+        <li><b>Number of trees:</b> {{ num_tree }}</li>
+        <li><b>Number of validation:</b> {{ num_validation }}</li>
+        <li><b>Size of test set:</b> {{ test_size }}</li>
+      </ul>
+      <hr style="width:100%;text-align:left;margin-left:0">
+
+      <body>
+        <h2>ROC-AUC Curve for Random Forest (AUC = {{ auc }})</h2>
+        <div id='chart' class='chart'></div>
+      </body>
+      <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>-->
+      <script type='text/javascript'>
+        var graphs = {{graphJSON1 | safe}};
+        Plotly.plot('chart',graphs,{});
+      </script>
+      
+      <hr style="width:100%;text-align:left;margin-left:0">
+
+      <body>
+        <h2>Confusion Matrix for Random Forest</h2>
+        <div id='chart2' class='chart'></div>
+      </body>
+      <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>-->
+      <script type='text/javascript'>
+        var graphs2 = {{graphJSON2 | safe}};
+        Plotly.plot('chart2',graphs2,{});
+      </script>
+
+      <p>
+        <center>
+        <form action="http://127.0.0.1:5000/prediction" method="GET">
+            <input type="submit" value="Predict again">
+        </form>
+        </center>
+      </p>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <p>
+        <center>
+        <form action="/" method="GET">
+            <input type="submit" value="Menu">
+        </form>
+        </center>
+      </p>
+  </body>
+</div>
+
+{% endblock content %}

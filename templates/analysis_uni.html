@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %} Analysis_uni {% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top:80px">
+  <body>
+      <center>
+      <h1> Exploratory Analysis | Univariate Analysis </h1>
+      </center>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <h2> Analysis Questions: </h2>
+      <p>
+        <ul>
+          <li> Which <b>age/gender</b> has the highest probability to have stroke? </li>
+          <li> How <b>avg_glucose_level</b> and <b>bmi</b> related to stroke? </li>
+        </ul>
+      </p>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <h2> Age Distribution </h2>
+      <center><img src="/static/images/uni_p6.png" width="50%"></center>
+      <p> The larger the age is, the more possible a person have stroke. </p>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <h2> Gender Distribution </h2>
+      <center><img src="/static/images/uni_p3.png" width="70%"></center>
+      <p>
+        The dataset contains more female patients than male ones. By comparing the proportion of gender within different groups, it can 
+        be concluded that there is no strong relationship between gender and stroke.
+      </p>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <h2> Glucose Distribution </h2>
+      <center><img src="/static/images/uni_p4.png" width="50%"></center>
+      <p>
+        From the histogram, a higher glucose level do suggest a higher possiblility to have stroke. However, for patients with regular 
+        average glucose levels, the possisbilty of having stroke won't decrease. 
+      </p>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <h2> BMI Distribution </h2>
+      <center><img src="/static/images/uni_p5.png" width="50%"></center>
+      <p>
+        The histogram suggests that stroke patients tend to have a higher bmi. There exists a weak correlation between bmi and stroke. 
+      </p>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <p>
+        <center>
+        <form action="/" method="GET">
+            <input type="submit" value="Menu">
+        </form>
+        </center>
+        </p>
+  </body>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,31 @@
+\contentsline {section}{\numberline {1}\textsc {Introduction}}{1}% 
+\contentsline {section}{\numberline {2}\textsc {Dataset Description}}{1}% 
+\contentsline {subsection}{\numberline {2.1}\textsc {About the Dataset}}{1}% 
+\contentsline {subsection}{\numberline {2.2}\textsc {Features}}{2}% 
+\contentsline {subsection}{\numberline {2.3}\textsc {Dateframe}}{2}% 
+\contentsline {subsection}{\numberline {2.4}\textsc {Data Preprocessing}}{2}% 
+\contentsline {subsection}{\numberline {2.5}\textsc {Data FAIRness}}{3}% 
+\contentsline {subsection}{\numberline {2.6}\textsc {Website Interface}}{3}% 
+\contentsline {section}{\numberline {3}\textsc {Exploratory Analysis}}{4}% 
+\contentsline {subsection}{\numberline {3.1}\textsc {Summary Statistics}}{4}% 
+\contentsline {subsubsection}{\numberline {3.1.1}\textsc {Statistical Analysis}}{4}% 
+\contentsline {subsubsection}{\numberline {3.1.2}\textsc {Data Distribution and Outliers Analysis}}{4}% 
+\contentsline {subsubsection}{\numberline {3.1.3}\textsc {Website Interface}}{5}% 
+\contentsline {subsection}{\numberline {3.2}\textsc {Univariate Analysis}}{6}% 
+\contentsline {subsubsection}{\numberline {3.2.1}\textsc {Analysis Questions}}{6}% 
+\contentsline {subsubsection}{\numberline {3.2.2}\textsc {Age Distribution}}{6}% 
+\contentsline {subsubsection}{\numberline {3.2.3}\textsc {Gender Distribution}}{6}% 
+\contentsline {subsubsection}{\numberline {3.2.4}\textsc {Glucose Distribution}}{7}% 
+\contentsline {subsubsection}{\numberline {3.2.5}\textsc {BMI Distribution}}{7}% 
+\contentsline {subsubsection}{\numberline {3.2.6}\textsc {Website Interface}}{8}% 
+\contentsline {subsection}{\numberline {3.3}\textsc {Bivariate Analysis}}{9}% 
+\contentsline {subsubsection}{\numberline {3.3.1}\textsc {Website Interface}}{10}% 
+\contentsline {subsection}{\numberline {3.4}\textsc {Feature Correlation}}{10}% 
+\contentsline {subsubsection}{\numberline {3.4.1}\textsc {Any surprise}}{11}% 
+\contentsline {subsubsection}{\numberline {3.4.2}\textsc {Website Interface}}{11}% 
+\contentsline {section}{\numberline {4}\textsc {Prediction}}{11}% 
+\contentsline {subsection}{\numberline {4.1}\textsc {Performance of XGBoost}}{11}% 
+\contentsline {subsection}{\numberline {4.2}\textsc {Performance of Random Forest}}{12}% 
+\contentsline {subsubsection}{\numberline {4.2.1}\textsc {Website Interface}}{14}% 
+\contentsline {section}{\numberline {5}\textsc {Findings and Limitations}}{14}% 
+\contentsline {section}{\numberline {6}\textsc {Conclusion}}{14}% 

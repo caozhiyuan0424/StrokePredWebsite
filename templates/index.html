@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top:80px">
+  <center>
+  <h1> BIS634 - Final Project | Stroke Prediction </h1>
+  <h5> Name: Zhiyuan Cao; NedID: zc347 </h5>
+  <hr style="width:100%;text-align:left;margin-left:0">
+  <img src="/static/images/home_p1.jpg" width="100%">
+  </center>
+  <hr style="width:100%;text-align:left;margin-left:0">
+  <h2> Overview </h2>
+    <p>
+      A stroke is a medical condition in which the blood supply to a part of the brain is disrupted, leading to brain cell death and possible long-term disability or death. Stroke is a leading cause of death and disability worldwide, with high rates of morbidity and mortality. It is worth paying attention to stroke because it can have a significant impact on an individual's quality of life and can also have a significant economic burden on society.
+    </p>
+    <div class="row">
+    <div class="col-sm-4">
+      <img src="/static/images/home_p3.png" width="100%" height="260">
+    </div>
+    <div class="col-sm-4">
+      <img src="/static/images/home_p2.jpeg" width="100%" height="260">
+    </div>
+    <div class="col-sm-4">
+      <img src="/static/images/home_p4.jpeg" width="100%" height="260">
+    </div>
+  </div>
+  <p>
+    In order to better understand and ultimately prevent or treat stroke, it is important to analyze data on stroke incidents and outcomes. Choosing a dataset for stroke analysis can help researchers and healthcare professionals gain insights into the risk factors, causes, and consequences of stroke, as well as identify potential interventions or treatments that may be effective in reducing the incidence and severity of stroke. By analyzing data on stroke, we can improve our understanding of this important public health issue and work towards finding solutions to reduce the burden of stroke on individuals and society.
+  </p>
+  <hr style="width:100%;text-align:left;margin-left:0">
+</div>
+
+
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Releated Links</h3>
+      <p>Quickly navigate to other parts of the website.</p>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="http://127.0.0.1:5000/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5000/dataset">Dataset</a>
+        </li>
+        <li class="nav-item dropright">
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Analysis</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="http://127.0.0.1:5000/analysis_stat">Summary Statistics</a>
+            <a class="dropdown-item" href="http://127.0.0.1:5000/analysis_uni">Univariate Analysis</a>
+            <a class="dropdown-item" href="http://127.0.0.1:5000/analysis_biv">Bivariate Analysis</a>
+            <a class="dropdown-item" href="http://127.0.0.1:5000/analysis_corr">Feature Correlation</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5000/prediction">Prediction</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-8">
+      <h2>Dataset</h2>
+      <h5>Basic information and decription of the dataset. </h5>
+      <img src="/static/images/home_p6.png" width="100%">
+      <p>This page includes the source, features, preprocessing and fairness of the dataset.</p>
+      <br>
+      <h2>Analaysis</h2>
+      <h5>Further exploratory analaysis of the dataset.</h5>
+      <img src="/static/images/home_p7.png" width="100%">
+      <p>
+        The analysis contains four parts:
+      </p>
+      <p>
+        <ul>
+          <li> Summary Statistics </li>
+          <li> Univariate Analysis </li>
+          <li> Bivariate Analysis </li>
+          <li> Feature Correlation </li>
+        </ul>
+      </p>
+      <h2>Prediction</h2>
+      <h5>Use different machine learning models to predict stroke. </h5>
+      <img src="/static/images/home_p8.png" width="100%">
+      <p>This page includes the evalution of performance of machine learning model <i>XGBoost</i> and <i>Random Forest</i>.</p>
+      <br>
+    </div>
+  </div>
+  <hr style="width:100%;text-align:left;margin-left:0">
+</div>
+{% endblock content %}

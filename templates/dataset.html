@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block title %} Dataset {% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top:80px">
+    <body>
+        <center>
+        <h1> Dataset Description </h1>
+        <hr style="width:100%;text-align:left;margin-left:0">
+        </center>
+        <h2> About the Dataset: </h2>
+        <p>
+            The dataset named "<a href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset?resource=download">Stroke Prediction</a>" 
+            is an open source dataset from Kaggle. It is under the <i>healthcare-dataset-stroke-data.csv</i> file. The data contains 5110 rows and 12 
+            features in total. The metadata of this datset is also available on Kaggle. 
+        </p>
+        <p>
+            <b>Dataset citation:</b> FEDESORIANO. Stroke Prediction Dataset. Retrieved December 17, 2022 from 
+            https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset?resource=download. 
+        </p>
+        <hr style="width:100%;text-align:left;margin-left:0">
+
+        <h2> Features: </h2>
+        <p>
+            <ul>
+                <li> <b>id:</b> unique identifier of a patient </li>
+                <li> <b>gender:</b> "Male", "Female" or "Other" </li>
+                <li> <b>age:</b> age of the patient </li>
+                <li> <b>hypertension:</b> 0 if the patient doesn't have hypertension, 1 if the patient has hypertension </li>
+                <li> <b>heart_disease:</b> 0 if the patient doesn't have any heart diseases, 1 if the patient has a heart disease </li>
+                <li> <b>ever_married:</b> "No" or "Yes" </li>
+                <li> <b>work_type:</b> "children", "Govt_jov", "Never_worked", "Private" or "Self-employed" </li>
+                <li> <b>Residence_type:</b> "Rural" or "Urban" </li>
+                <li> <b>avg_glucose_level:</b> average glucose level in blood </li>
+                <li> <b>smoking_status:</b> "formerly smoked", "never smoked", "smokes" or "Unknown"* </li>
+                <li> <b>stroke:</b> 1 if the patient had a stroke or 0 if not </li>
+            </ul>
+            *Note: "Unknown" in smoking_status means that the information is unavailable for this patient
+        </p>
+        <hr style="width:100%;text-align:left;margin-left:0">
+
+        <h2> Dataframe: </h2>
+        <p>
+            Below is the illustration of my dataframe. Because the whole dataset contains 5110 rows, I only show the first 20 rows here. 
+        </p>
+        <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                {% for col in column_names %}
+                <th>
+                  {{col}}
+                </th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in row_data %}
+              <tr>
+                {% for col, row_ in zip(column_names, row) %}
+                <td>{{row_}}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <hr style="width:100%;text-align:left;margin-left:0">
+
+        <h2> Data Preprocessing: </h2>
+        <p>
+            <ul>
+                <li> <b>Data cleaning:</b> I drop all the rows with missing value 'nan'. After doing so, the dataset contains 4909 rows. Except 
+                these missing values, the dataset is very clean and does not need further cleaning: The author has already performed necessary 
+                data cleaning. </li>
+                <li> <b>Data processing:</b> I transform all the categorical data into dummy ones to enable machine learning models to process them. </li>
+            </ul>
+        </p>
+        <hr style="width:100%;text-align:left;margin-left:0">
+
+        <h2> Data FAIRness: </h2>
+        <p>
+            <ul>
+                <li> <b>Findability:</b> The stroke dataset is properly documented and has clear and accurate metadata. Hence, 
+                    it is easy for others to discover and locate it. </li>
+                <li> <b>Accessibility:</b> The stroke dataset is available in a format that is easy to use and that there are 
+                    no barriers to accessing the data: It is totally free and liscensed by the author. Thus, the dataset can be 
+                    easily accessible to those who need it.  </li>
+                <li> <b>Interoperability:</b> Using standardized formats and providing clear documentation about the data's 
+                    structure and content, the dataset has a good interoperability, since it can be easily integrated with 
+                    other datasets or tools.</li>
+                <li> <b>Reusability:</b> The dataset provides clear documentation about the data's provenance, as well as any 
+                    relevant ethical or legal considerations. Hence the dataset can be easily reused for multiple purposes. </li>
+            </ul>
+        </p>
+        <hr style="width:100%;text-align:left;margin-left:0">
+
+        <p>
+        <center>
+        <form action="/" method="GET">
+            <input type="submit" value="Menu">
+        </form>
+        </center>
+        </p>
+    </body>
+</div>
+
+{% endblock content %}
+

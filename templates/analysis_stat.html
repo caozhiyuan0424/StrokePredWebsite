@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %} Analysis_stat {% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top:80px">
+  <body>
+      <center>
+      <h1> Exploratory Analysis | Summary Statistics </h1>
+      </center>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <h2> Basic Statistics </h2>
+      <p>
+        <h5> Summary statistics for patients with stroke </h5>
+        <center><img src="/static/images/stat_p1.png" width="50%"></center>
+      </p>
+      <p>
+        <h5> Summary statistics for patients without stroke </h5>
+        <center><img src="/static/images/stat_p2.png" width="50%"></center>
+      </p>
+      <p>
+        From the statistics, it is clear that:
+        <ul>
+          <li> <b> The mean age for people with stroke is much higher than those without stroke. </b>Patients with stroke tends to be 26 years 
+            elder than the healthy on average.  </li>
+          <li> <b> Patients with stroke have higher probability to have hypertension than healthy people. </b> </li>
+          <li> <b> Patients with stroke have slightly higher probability to have heart disease than healthy people. </b> </li>
+          <li> <b> Patients with stroke tends to have a higher average glucose level than healthy people. </b> </li>
+        </ul>
+        In conclusion, elder people with other chronic diseases have a higher possiblility to have stroke. 
+      </p>
+      <hr style="width:100%;text-align:left;margin-left:0">
+
+      <h2> Data Distribution & Outliers Analysis </h2>
+      <p>
+        <center>
+          <img src="/static/images/stat_p4.png" width="100%">
+          <img src="/static/images/stat_p3.png" width="100%">
+        </center>
+      </p>
+      <p>
+        In our dataset, there are three numberic features. The above figure are histogram and barplot, which shows the distribution 
+        of these data. From the figure: 
+      </p>
+      <p>
+        <ul>
+          <li> <b>There is no outlier for age.</b> </li>
+          <li> <b>There are a lot of outliers for avg_glucose_level and bmi. All the outlier are high values.</b> </li>
+        </ul>
+      </p>
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <p>
+        <center>
+        <form action="/" method="GET">
+            <input type="submit" value="Menu">
+        </form>
+        </center>
+        </p>
+  </body>
+</div>
+
+{% endblock content %}
