@@ -64,4 +64,4 @@ jobs:
         with:
           app-name: 'BIS634StrokePredAnalysis'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3E8BAF77E31D43BC906CD90CFD6DAFC1 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8EFE3ECB2B4F4E1DA32AC3DCAC993842 }}
